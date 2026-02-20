@@ -130,6 +130,48 @@ dig @ns1.example.com example.com axfr
 
 curl -s "https://crt.sh/?q=%25.example.com&output=json" | jq -r '.[].name_value'
 
+## sublist3r tool
+
+sublist3r -h
+
+sublist3r -d domain.com
+
+- amass = https://github.com/owasp-amass/amass
+- crt.sh = https://crt.sh/ 
+
+---
+
+# Google Dorks
+
+- site:domain.com
+- site: domain.com inurl:admin
+- site:*.domain.com
+- site:*.domain.com intitle:admin
+- site:*.domain.com filetype:pdf
+- intitle:indexof
+- cache:domain.com
+- GHDB (Google Hacking Database website)
+
+---
+
+# Email Harvesting
+
+- theHarveter -d domain.com -b sources(google, linkedin, etc..)
+- theHarveter -d domain.com (searches in all sources)
+- hunter.io - https://hunter.io/email-finder
+- phonebook.cz - https://phonebook.cz/
+- clearbit connect
+- email hippo - https://tools.emailhippo.com/ (for verifying the emails)
+- email checker - https://email-checker.net/ (for verifying the emails)
+
+---
+
+# Leaked Password Databases
+
+- haveibeenpawned
+- dehashed
+- https://github.com/hmaverickadams/breach-parse - Tool by TCM
+
 ---
 
 # Infrastructure-Based Enumeration
@@ -145,6 +187,17 @@ curl -s https://crt.sh/\?q\=<target-domain>\&output\=json | jq .
 ## Tool - WAFWOOF
 
 wafoof domain.com
+
+---
+
+# Website Recon
+
+- host domain.com
+- /robots.txt
+- /sitemap.xml
+- builtwith extention
+- wappalyzer extention
+- whatweb
 
 ---
 
