@@ -140,6 +140,14 @@ curl -s https://crt.sh/\?q\=<target-domain>\&output\=json | jq .
 
 ---
 
+# Checking if website is protected by WAF
+
+## Tool - WAFWOOF
+
+wafoof domain.com
+
+---
+
 # General Web Recon Principles
 
 Passive Techniques Include:
