@@ -58,6 +58,10 @@ dig ns <domain.tld> @<nameserver>
 
 dig any <domain.tld> @<nameserver>
 
+### Additional Tools
+- Dnsrecon
+- dnsdumpster.com
+
 ### Tactical Notes
 - ANY may be restricted
 - Identify NS servers for potential zone transfer testing
