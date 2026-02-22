@@ -4,6 +4,15 @@ Goal: Enumerate shares, users, policies, and credentials.
 
 ---
 
+# Nmap Enumeration
+
+- nmap -p 445 --script smb-protocols IP
+- nmap -p 445 --script smb-security-mode IP
+- nmap -p 445 --script smb-enum-sessions IP
+- nmap -p 445 --script smb-enum-shares IP
+
+---
+
 # Null Session
 
 smbclient -N -L //<FQDN/IP>
