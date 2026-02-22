@@ -32,7 +32,9 @@ route print
 
 ## Ping Sweep
 
-fping -asgq 172.16.5.0/23
+- fping -asgq 172.16.5.0/23
+- sudo nmap -sn 192.168.2.1/24
+- sudo netdiscover -i wlan0 -r 192.168.0.106/24 (uses ARP requests for scanning)
 
 ### Tactical Notes
 - Fast subnet sweep
@@ -70,9 +72,11 @@ nmap -v -sV -p1234 localhost
 
 # DNS Enumeration (Active)
 
-dnsenum example.com -f subdomains.txt
-
-dnsenum --dnsserver <nameserver> --enum -p 0 -s 0 -o
+- dnsenum example.com -f subdomains.txt
+- dnsenum --dnsserver <nameserver> --enum -p 0 -s 0 -o
+- dig axfr @nameserver domain.com
+- fierce -dns domain.com (for zone transfer)
+- fierce -dns doamin.com -w wordlist (for subdomain bruteforce)
 
 ---
 
